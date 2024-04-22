@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/my_database</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">ajaz@123</property>
+		<property name="hibernate.hbm2ddl.auto">update</property> <!-- used to create table in database. basically create is used to create 
+			a table in database but it always create a new table so we use the update 
+			which updates the table instead of creating the table if table doesn't exist 
+			then it create a new one -->
+		<!-- <property name="dialect">org.hibernate.dialect.MySQLDialect</property> -->
+		<property name="show_sql">true</property><!-- it shows us which sql command it used/created/make -->
+		<mapping class="com.entities.Note" />
+		
+	</session-factory>
+</hibernate-configuration>
